@@ -1,0 +1,17 @@
+<!-- Latest reddit posts -->
+<ion-view title="Reddit">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="card" ng-repeat="post in posts" class="item" ng-click="browse(post.data.permalink)">
+      <div class="item item-divider">
+        {{post.data.title}}
+      </div>
+      <div class="item item-image">
+        <!-- If self post or image broken show monstercat snoo thingy -->
+        <img src="{{post.data.thumbnail}}" onerror="this.src='assets/reddit.jpg';" />
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

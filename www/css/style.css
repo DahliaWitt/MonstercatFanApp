@@ -1,0 +1,19 @@
+/* My */ body {
+  /* Is ready hehehe */
+}
+
+/* Text Centered */
+.Artists {
+    text-align: center;
+}
+
+/* Makes the default card style look better */
+.card .item{
+  border-top: 4px solid #7a8493 !important;
+}
+
+/* Makes Images Responsive */
+.responsive-image{
+  height:auto;
+  width:100%;
+}

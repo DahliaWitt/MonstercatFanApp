@@ -1,0 +1,31 @@
+<!-- Lists New Releases -->
+<ion-view title="New Releases">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content ng-init="init()">
+    <!-- Repeats for each release in the array -->
+    <div class="list card" ng-repeat="track in tracks track by $index">
+      <div class="item item-avatar">
+        <img src="assets/logo.png">
+        <h2>{{track.title}}</h2>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src="{{track.artwork_url}}">
+        <p>
+          <a href="#" class="subdued">{{track.favoritings_count}} Likes</a>
+          <a href="#" class="subdued">{{track.comment_count}} Comments</a>
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" ng-click="prePlay(track.stream_url, track.title)">
+          <i class="icon ion-cloud"></i>
+          Stream
+        </a>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

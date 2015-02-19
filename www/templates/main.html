@@ -1,0 +1,48 @@
+<!-- Main "Dashboard", default view -->
+<ion-view title="Home">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+
+      <!-- Show latest track and reddit post -->
+      <a class="item item-thumbnail-left" href="#/app/release">
+        <img src="{{$root.latestTrackThumbnail}}">
+        <h2>Latest Release:</h2>
+        <p>{{$root.latestTrack}}</p>
+      </a>
+
+      <a class="item item-thumbnail-left" href="#/app/reddit">
+        <img src="{{$root.latestRedditThumbnail}}" onerror="this.src='/assets/reddit.jpg';">
+        <h2>Top Reddit Post:</h2>
+        <p>{{$root.latestReddit}}</p>
+      </a>
+      <div class="item item-divider">
+        Navigation
+      </div>
+      <ion-item href="#/app/release">
+        New Releases
+      </ion-item>
+      <!-- TODO: Twitch API to Cordova Plugin??? -->
+      <ion-item nav-clear href="#" onclick="window.open('http://twitch.tv/monstercat', '_blank', 'location=yes'); return false;">
+        Monstercat Podcast
+      </ion-item>
+      <ion-item href="#/app/artists">
+        Artists
+      </ion-item>
+      <!-- TODO: NEXT VERSION: Get playlists from SC.get() function ng-repeat list
+      <ion-item href="#/app/albums">
+        Albums
+      </ion-item>
+      -->
+      <ion-item href="#/app/reddit">
+        Reddit Discussion
+      </ion-item>
+      <ion-item nav-clear href="#" onclick="window.open('http://shop.monstercat.com', '_system', 'location=yes'); return false;">
+        Shop
+      </ion-item>
+      </a>
+    </ion-list>
+  </ion-content>
+</ion-view>
