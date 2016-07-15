@@ -1,3 +1,5 @@
+# WARNING: Most of this code is pretty old and probably doesn't work anymore. The project has pivoted to the BadKitty app which can be found on the iOS and Android app stores. Unfortunately for now, that project is closed source. 
+
 ## Overview
 
 The Monstercat Fan App was a project created for the Monstercat Community. It serves as a central point for all things Monstercat and as a quick way to access many sub features. The app is not endorsed or associated with Monstercat. 
